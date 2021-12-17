@@ -1,0 +1,13 @@
+<div class="clock" *ngIf="isSubscriptionActive">
+  <h3>{{ 'Reloj' | uppercase }}</h3>
+
+  <div class="container-class">
+    <h3 class="time-class">{{hour}}:{{minutes}}:{{seconds}}</h3>
+    <h3 class="ampm-class">{{amPm}}</h3>
+  </div>
+
+  <div class="date-class">
+    <p>{{day}},</p>
+    <p class="day-month-class">{{date}}</p>
+  </div>
+</div>

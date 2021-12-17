@@ -1,0 +1,12 @@
+
+<div class="center-class">
+  <h3>{{ 'Cronómetro' | uppercase }}</h3>
+
+  <div class="container-class">
+    <h3 class="time-class">{{hh}}:{{mm}}:{{ss}}</h3>
+  </div>
+
+  <button (click)="start()">Start</button>
+  <button (click)="pause()">Pause</button>
+  <button (click)="reset()">Reset</button>
+</div>

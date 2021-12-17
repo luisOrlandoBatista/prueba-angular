@@ -1,0 +1,57 @@
+.form-class {
+  align-items: center;
+}
+.container-wizard-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-class {
+  align-items: center;
+}
+.circle-step-class {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: gray;
+}
+.stripe-class {
+  width: 150px;
+  height: 1px;
+  background-color: gray;
+}
+.form-step-class {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.actions-button-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+.m-r-15 {
+  margin-right: 15px;
+}
+.bg-color-green {
+  background-color: green;
+}
+.last-name-class {
+ margin-right: 110px;
+  margin-left: 120px;
+}
+.reset-button-class {
+  display: flex;
+  flex-direction: column;
+  text-align: center
+}
+.container-form-step-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-reset-class {
+  margin-top: 20px;
+}

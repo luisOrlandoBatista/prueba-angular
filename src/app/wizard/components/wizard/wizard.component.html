@@ -1,0 +1,45 @@
+<div [formGroup]="form" class="form-class" *ngIf="!isCompleted">
+  <div class="container-wizard-class">
+    <div class="circle-step-class" [ngClass]="{'bg-color-green': isVisitedStep0}"></div>
+    <div class="stripe-class"></div>
+    <div class="circle-step-class" [ngClass]="{'bg-color-green': isVisitedStep1}"></div>
+    <div class="stripe-class"></div>
+    <div class="circle-step-class" [ngClass]="{'bg-color-green': isVisitedStep2}"></div>
+  </div>
+  <div class="container-wizard-class">
+    <div>Name</div>
+    <div class="last-name-class">Last Name</div>
+    <div>Address</div>
+  </div>
+  <div class="container-form-class">
+
+    <div class="container-form-step-class">
+      <div class="form-step-class" [@wizard]="stateWizard">
+        <input type="text" formControlName="name" placeholder="Name">
+      </div>
+
+      <div class="form-step-class" [@wizard1]="stateWizard">
+        <input type="text" formControlName="lastName" placeholder="lastName" >
+      </div>
+
+      <div class="form-step-class" [@wizard2]="stateWizard">
+        <input type="text" formControlName="address" placeholder="Address" >
+      </div>
+    </div>
+
+    <div class="actions-button-class">
+      <button class="m-r-15" (click)="start()">Start</button>
+      <button class="m-r-15" (click)="back()">Back</button>
+      <button class="m-r-15" (click)="next()">Next</button>
+      <button (click)="finish()" [disabled]="!isVisitedStep2">Finish</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isCompleted" class="reset-button-class">
+  <h3>FELICIDADES!, has completado el wizard</h3>
+  <h3>Para llegar hasta aquí, significa que al menos una vez recorristes todos los pasos</h3>
+  <div class="button-reset-class">
+    <button class="m-r-15" (click)="reset()">Reset Wizard</button>
+  </div>
+</div>
