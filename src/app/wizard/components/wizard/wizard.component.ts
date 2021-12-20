@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {wizardAnimation} from "../animations/wizard-animation";
+import {wizardAnimation} from "../../animations/wizard-animation";
 
 @Component({
   selector: 'app-wizard',

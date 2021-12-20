@@ -1,0 +1,17 @@
+<div class="uk-wizard-class">
+  <div class="uk-wizard-nav-class">
+    <ul>
+      <li *ngFor="let item of items" (click)="navClicked(item.id)"
+          [style.width.%]="navWidth">
+        <div class="uk-li" [class.active-border-bottom]="item.id === currentStepIndex" [class.m-b-5]="item.id != currentStepIndex">
+          <span *ngIf="item.step.title">{{item.step.title}}</span>
+          <span *ngIf="!item.step.title">Step {{item.id + 1}}</span>
+        </div>
+        <div class="uk-overlay-class" [class.active]="item.id === currentStepIndex"></div>
+      </li>
+    </ul>
+  </div>
+  <div class="uk-wizard-steps-class">
+    <ng-content></ng-content>
+  </div>
+</div>

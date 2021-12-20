@@ -1,0 +1,11 @@
+<div [class.active-step]="activeStep" [class.inactive]="!activeStep">
+  <div>
+    <ng-content></ng-content>
+  </div>
+  <div class="step-footer-class">
+    <button *ngIf="!firstStep" class="button-back-class" (click)="backClicked()">Back</button>
+    <div *ngIf="firstStep"></div>
+    <button *ngIf="!lastStep" class="button-next-class" (click)="nextClicked()">Next</button>
+    <button *ngIf="lastStep" class="button-next-class" [disabled]="!isAllVisitedStep" (click)="nextClicked()">Finish</button>
+  </div>
+</div>

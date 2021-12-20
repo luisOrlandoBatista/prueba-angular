@@ -1,3 +1,11 @@
+<form [formGroup]="form" class="center-class" >
+  <input class="input-class" placeholder="Hour" type="number" formControlName="hour">
+  <input class="input-class" placeholder="Minutes" type="number" formControlName="minutes">
+  <input class="input-class" placeholder="Second" type="number" formControlName="second">
+  <button [disabled]="form.invalid" (click)="apply()">Apply</button>
+</form>
+
+
 <div class="center-class">
   <h3>{{ 'Cuenta atrás' | uppercase }}</h3>
 

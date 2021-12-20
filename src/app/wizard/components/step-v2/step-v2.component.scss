@@ -1,0 +1,40 @@
+.active-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inactive {
+  display: none;
+}
+
+.step-footer-class {
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clear {
+  clear: both;
+}
+
+.m-l-220 {
+  margin-left: 220px;
+}
+
+.button-back-class {
+  float: left;
+  cursor: pointer;
+}
+
+.button-next-class {
+  float: left;
+  cursor: pointer;
+}
+
+.button-first-step-next-class {
+  float: left;
+  cursor: pointer;
+}

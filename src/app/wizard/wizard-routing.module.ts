@@ -1,10 +1,16 @@
-import { NgModule } from "@angular/core";
+import {NgModule} from "@angular/core";
 
-import { Routes, RouterModule } from "@angular/router";
+import {Routes, RouterModule} from "@angular/router";
 import {WizardComponent} from "./components/wizard/wizard.component";
+import {WizardTemplateComponent} from "./components/wizard-template/wizard-template.component";
 
 export const routes: Routes = [
-  { path: '', component: WizardComponent },
+  {
+    path: '', children: [
+      {path: 'wizard1', component: WizardComponent},
+      {path: 'wizard2', component: WizardTemplateComponent}
+    ]
+  },
 ];
 
 @NgModule({
@@ -13,4 +19,5 @@ export const routes: Routes = [
   declarations: [],
   providers: [],
 })
-export class WizardRoutingModule { }
+export class WizardRoutingModule {
+}

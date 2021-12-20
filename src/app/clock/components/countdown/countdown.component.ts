@@ -1,5 +1,6 @@
 import {Component, OnDestroy} from "@angular/core";
 import {interval, Subscription} from "rxjs";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'app-countdown',
@@ -11,13 +12,19 @@ export class CountDownComponent implements OnDestroy {
   mm: any;
   ss: any;
 
-  // hh: string = '00';
-  // mm: string = '00';
-  // ss: string = '00';
+  form: FormGroup = new FormGroup({
+    hour: new FormControl(0, [Validators.min(0), Validators.max(23)]),
+    minutes: new FormControl(0, [Validators.min(0), Validators.max(59)]),
+    second: new FormControl(0, [Validators.min(0), Validators.max(59)]),
+  });
   private subscription!: Subscription;
   isSubscriptionActive: boolean = false;
 
   constructor() {
+    this.reset();
+  }
+
+  apply() {
     this.reset();
   }
 
@@ -82,10 +89,9 @@ export class CountDownComponent implements OnDestroy {
       this.isSubscriptionActive = false;
       this.subscription.unsubscribe();
     }
-    const date: Date = new Date();
-    const hh = date.getHours();
-    const mm = date.getMinutes();
-    const ss = date.getSeconds();
+    const hh = this.form.value.hour;
+    const mm = this.form.value.minutes;
+    const ss = this.form.value.second;
 
     this.hh = hh < 10 ? '0' + hh : hh;
     this.mm = mm < 10 ? '0' + mm : mm;

@@ -1,0 +1,44 @@
+.uk-wizard-nav-class {
+  display: flex;
+  justify-content: center;
+}
+
+.uk-wizard-steps-class {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  display: inline-block;
+  min-width: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.uk-li {
+  width: 100%;
+  padding: 10px 0px 5px 0px;
+  text-align: center;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.uk-overlay-class.active {
+  opacity: 0.0;
+}
+
+.active-border-bottom {
+  border-bottom: 5px solid;
+  border-bottom-color: #1976d2;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
+}
